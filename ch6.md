@@ -21,6 +21,14 @@ public class Squint {
         (map (fn [x] (* x z)) ;___ 제곱을
             (range)))) ; 정수의
 ```
+```Kotlin
+fun squint() {
+        generateSequence(0) { it + 1 }   // 자연수
+            .take(25)                       // 25까지
+            .map { it * it }                    // 제곱을 
+            .forEach { println(it) }            // 출력
+    }
+```
 * println, take, map, range는 모두 함수다.
   * 리스프에서는 함수를 괄호안에 넣는 방식으로 호출한다.
   * range -  0부터 시작해서 끝이 없는 정수 리스트를 반환
