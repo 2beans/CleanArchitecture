@@ -23,10 +23,10 @@ public class Squint {
 ```
 ```Kotlin
 fun squint() {
-        generateSequence(0) { it + 1 }   // 자연수
-            .take(25)                       // 25까지
-            .map { it * it }                    // 제곱을 
-            .forEach { println(it) }            // 출력
+    generateSequence(0) { it + 1 }   // 자연수
+      .take(25)                      // 25까지
+      .map { it * it }               // 제곱을 
+      .forEach { println(it) }       // 출력
     }
 ```
 * println, take, map, range는 모두 함수다.
