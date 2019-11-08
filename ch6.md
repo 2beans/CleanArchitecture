@@ -21,14 +21,6 @@ public class Squint {
         (map (fn [x] (* x z)) ;___ 제곱을
             (range)))) ; 정수의
 ```
-```Kotlin
-fun squint() {
-    generateSequence(0) { it + 1 }   // 자연수
-      .take(25)                      // 25까지
-      .map { it * it }               // 제곱을 
-      .forEach { println(it) }       // 출력
-    }
-```
 * println, take, map, range는 모두 함수다.
   * 리스프에서는 함수를 괄호안에 넣는 방식으로 호출한다.
   * range -  0부터 시작해서 끝이 없는 정수 리스트를 반환
@@ -40,6 +32,15 @@ fun squint() {
   * 가변변수는 프로그램 실행 중에 상태가 변 할 수 있다.
 * 클로저에서는 x 와 같은 변수가 한번 초기화 되면 절대로 변하지 않는다.
   * 함수형 언어에서 변수는 변경되지 않는다.
+
+```Kotlin
+fun squint() {
+    generateSequence(0) { it + 1 }   // 자연수
+      .take(25)                      // 25까지
+      .map { it * it }               // 제곱을 
+      .forEach { println(it) }       // 출력
+    }
+```
 
 ### 불변성과 아키텍처
 * 아키텍처를 고려할때 왜 변수의 **가변성**을 염두해야 하는가?
