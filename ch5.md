@@ -198,13 +198,13 @@ void copy() {
 
 > getchar() 함수는 STDIN에서 문자를 읽고 </br>
 putchar() 함수는 STDOUT으로 문자를 씁니다.</br>
-getchar()와 putchar()의 행위가 STDIN 과 STDOOU 타입에 의존하므로 다형적이라고 말할 수 있다고 설명합니다.
+getchar()와 putchar()의 행위가 STDIN 과 STDOUT 타입에 의존하므로 다형적이라고 말할 수 있다고 설명합니다.
 
 </br>
 
 
-위 코드에서 getchar()는 장치 드라이버를 호출합니다.</br>
-다음으로 어떻게 문자를 읽는 장치 드라이버를 호출하는지에 대해 설명합니다.
+
+다음으로 표준함수를 재정의하여 플러그인 형태로 구현하고 사용하는 예를 보여줍니다.
 
 
 ```
@@ -246,7 +246,7 @@ int getchar() {
 }
 ```
 
-> STDIN을 FILE로 선언하면 STDIN이 콘솔 데이터 구조를 가리키므로 getchar()는 호출은 방식을 위와 같은 형태로 구현할 수 있습니다.</br>
+> STDIN을 FILE로 선언하면 STDIN이 콘솔 데이터 구조를 가리키므로 getchar()는 위와 같은 형태로 구현할 수 있습니다.</br>
 > 정리하면 getchar()는 STDIN으로 참조되는 FILE 데이터 구조의 read 포인터가 가리키는 함수를 호출하게 됩니다.
 
 </br>
