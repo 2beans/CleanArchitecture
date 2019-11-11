@@ -246,7 +246,7 @@ int getchar() {
 }
 ```
 
-> STDIN을 FILE로 선언하면 STDIN이 콘솔 데이터 구조를 가리키므로 getchar()는 위와 같은 형태로 구현할 수 있습니다.</br>
+> FILE 구조체 타입의 STDIN을 선언하면 STDIN이 콘솔 데이터 구조를 가리키므로 getchar()는 위와 같은 형태로 구현할 수 있습니다.</br>
 > 정리하면 getchar()는 STDIN으로 참조되는 FILE 데이터 구조의 read 포인터가 가리키는 함수를 호출하게 됩니다.
 
 </br>
